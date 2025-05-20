@@ -1,6 +1,173 @@
 twilio-php Changelog
 ====================
 
+[2025-05-13] Version 8.6.1
+--------------------------
+**Library - Fix**
+- [PR #844](https://github.com/twilio/twilio-php/pull/844): PHP 8.4 deprecation fix. Thanks to [@phpfui](https://github.com/phpfui)!
+
+**Accounts**
+- Changes to add date_of_consent param in Bulk Consent API
+
+**Api**
+- Change `friendly_name`, `date_created` and `date_updated` properties to type `string`.
+
+**Twiml**
+- Update twiml definition for `<ConversationRelay>` and `<Assistant>`
+
+
+[2025-05-05] Version 8.6.0
+--------------------------
+**Api**
+- Add `response_key` for `Usage Triggers` fetch endpoint.
+
+**Flex**
+- Add Update Interaction API
+- Adding `webhook_ttid` as optional parameter in Interactions API
+
+**Serverless**
+- Add node22 as a valid Build runtime
+- Add node20 as a valid Build runtime
+
+**Video**
+- removed `transcribe_participants_on_connect` and `transcriptions_configuration` from the room resource **(breaking change)**
+- Added `transcribe_participants_on_connect` and `transcriptions_configuration` to the room resource
+
+
+[2025-04-07] Version 8.5.0
+--------------------------
+**Library - Docs**
+- [PR #862](https://github.com/twilio/twilio-php/pull/862): update readme for oauth feature. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+
+**Library - Feature**
+- [PR #854](https://github.com/twilio/twilio-php/pull/854): merge OAuth support into main. Thanks to [@manisha1997](https://github.com/manisha1997)!
+
+**Studio**
+- Add documentation for parent_step_sid field in Step resource
+
+
+[2025-03-20] Version 8.4.1
+--------------------------
+**Library - Chore**
+- [PR #851](https://github.com/twilio/twilio-php/pull/851): fix seralization. Thanks to [@manisha1997](https://github.com/manisha1997)!
+
+**Accounts**
+- Update Safelist API docs as part of prefix supoort
+
+**Flex**
+- Removing `first_name`, `last_name`, and `friendly_name` from the Flex User API
+
+**Messaging**
+- Add missing tests under transaction/phone_numbers and transaction/short_code
+
+
+[2025-03-11] Version 8.4.0
+--------------------------
+**Api**
+- Add the missing `emergency_enabled` field for `Address Service` endpoints
+
+**Messaging**
+- Add missing enums for A2P and TF
+
+**Numbers**
+- add missing enum values to hosted_number_order_status
+
+**Twiml**
+- Convert Twiml Attribute `speechModel` of type enum to string **(breaking change)**
+
+
+[2025-02-20] Version 8.3.15
+---------------------------
+**Flex**
+- Adding Digital Transfers APIs under v1/Interactions
+
+**Numbers**
+- Convert webhook_type to ienum type in v1/Porting/Configuration/Webhook/{webhook_type}
+
+**Trusthub**
+- Changing TrustHub SupportingDocument status enum from lowercase to uppercase since kyc-orch returns status capitalized and rest proxy requires strict casing
+
+
+[2025-02-11] Version 8.3.14
+---------------------------
+**Api**
+- Change downstream url and change media type for file `base/api/v2010/validation_request.json`.
+
+**Intelligence**
+- Add json_results for Generative JSON operator results
+
+**Messaging**
+- Add DestinationAlphaSender API to support Country-Specific Alpha Senders
+
+**Video**
+- Change codec type from enum to case-insensitive enum in recording and room_recording apis
+
+
+[2025-01-28] Version 8.3.13
+---------------------------
+**Api**
+- Add open-api file tag to `conference/call recordings` and `recording_transcriptions`.
+
+**Events**
+- Add support for subaccount subscriptions (beta)
+
+**Insights**
+- add new region to conference APIs
+
+**Lookups**
+- Add new `parnter_sub_id` query parameter to the lookup request
+
+
+[2025-01-13] Version 8.3.12
+---------------------------
+**Library - Chore**
+- [PR #841](https://github.com/twilio/twilio-php/pull/841): update changelog for 8.3.11. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+- [PR #840](https://github.com/twilio/twilio-php/pull/840): fix model names in json serialize and payload. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+
+**Library - Fix**
+- [PR #839](https://github.com/twilio/twilio-php/pull/839): Php8.4 take 2. Thanks to [@phpfui](https://github.com/phpfui)!
+
+**Messaging**
+- Adds validity period Default value in service resource documentation
+
+
+[2025-01-10] Version 8.3.11
+---------------------------
+**Library - Fix**
+- [PR #839](https://github.com/twilio/twilio-php/pull/839): Php8.4 take 2. Thanks to [@phpfui](https://github.com/phpfui)!
+
+**Library - Chore**
+- [PR #840](https://github.com/twilio/twilio-php/pull/840): fix model names in json serialize and payload. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+
+
+[2025-01-09] Version 8.3.10
+---------------------------
+**Library - Fix**
+- [PR #834](https://github.com/twilio/twilio-php/pull/834): avoid deprecation messages for PHP 8.4. Thanks to [@phpfui](https://github.com/phpfui)!
+
+**Library - Chore**
+- [PR #837](https://github.com/twilio/twilio-php/pull/837): revert 'fix: avoid deprecation messages for PHP 8.4'. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+
+**Numbers**
+- Change beta feature flag to use v2/BulkHostedNumberOrders
+
+
+[2024-12-05] Version 8.3.9
+--------------------------
+**Api**
+- Add optional parameter `intelligence_service` to `transcription`
+- Updated `phone_number_sid` to be populated for sip trunking terminating calls.
+
+**Numbers**
+- Add Update Hosted Number Order V2 API endpoint
+- Update Port in docs
+
+**Twiml**
+- Add optional parameter `intelligence_service` to `<Transcription>`
+- Add support for new `<ConversationRelay>` and `<Assistant>` noun
+- Add `events` attribute to `<Dial>` verb
+
+
 [2024-11-15] Version 8.3.8
 --------------------------
 **Library - Chore**
