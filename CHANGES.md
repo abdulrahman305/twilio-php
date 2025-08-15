@@ -1,6 +1,82 @@
 twilio-php Changelog
 ====================
 
+[2025-07-24] Version 8.7.0
+--------------------------
+**Events**
+- Remove `SinkSid` parameter when updating subscriptions. **(breaking change)**
+
+**Twiml**
+- Remove Duplicates.
+- Add Polly Generative voices.
+- Add Latest Google (Chirp3-HD) voices.
+
+
+[2025-07-10] Version 8.6.5
+--------------------------
+**Flex**
+- update team name for web_channel, webchat_init_token, webchat_refresh_token
+
+
+[2025-07-03] Version 8.6.4
+--------------------------
+**Library - Docs**
+- [PR #868](https://github.com/twilio/twilio-php/pull/868): add php 8.4 in supported version. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+
+**Bulkexports**
+- Changed the type of 'details' field to be a list of objects instead of a single object
+
+**Conversations**
+- Updates to `method` casing for ConfgurationAddress, ConversationScopedWebhook, and ServiceConversationScopedWebhook for RestProxy compatibility
+
+**Proxy**
+- remove shortcodes resource as its no longer used
+
+**Serverless**
+- Change log field level from type `ienum` to `string` in Logs api
+
+**Taskrouter**
+- Remove `URL-encoded` from attributes param definition in tasks
+
+**Trunking**
+- Added `symmetric_rtp_enabled` property on Trunks.
+
+**Twiml**
+- Add support for `<WhatsApp>` noun under `<Dial>` verb
+
+
+[2025-06-12] Version 8.6.3
+--------------------------
+**Library - Fix**
+- [PR #867](https://github.com/twilio/twilio-php/pull/867): updating client to only use http and https. Thanks to [@manisha1997](https://github.com/manisha1997)!
+
+**Api**
+- Change DependentPhoneNumber `capabilities` type `object` and `date_created`, `date_updated` to `date_time<rfc2822>`
+- Updated the `Default` value from 0 to 1 in the Recordings Resource `channels` property
+
+**Serverless**
+- Update `ienum` type level in Logs api
+
+**Verify**
+- Update Channel list in Verify Attempst API
+- Update `ienum` type for Conversion_Status in Verify Attempts API
+
+**Twiml**
+- Add `us2` to the list of supported values for the region attribute in the `<Conference>` TwiML noun.
+
+
+[2025-05-29] Version 8.6.2
+--------------------------
+**Api**
+- Added several usage category enums to `usage_record` API
+
+**Numbers**
+- Update the porting documentation
+
+**Verify**
+- Update `ienum` type for Channels in Verify Attempts API
+
+
 [2025-05-13] Version 8.6.1
 --------------------------
 **Library - Fix**
